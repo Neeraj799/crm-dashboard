@@ -14,3 +14,5 @@ export type Deal = {
   }[];
   stakeholders: string[];
 };
+
+export type DealTab = "search" | "amount" | "date" | "notes" | "priority";

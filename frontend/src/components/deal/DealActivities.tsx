@@ -7,10 +7,12 @@ type Activity = {
 const DealActivities = ({ activities }: { activities: Activity[] }) => {
   return (
     <div>
+      <div className="text-black mb-4 font-semibold">Activities</div>
+
       {activities.map((activity, index) => (
-        <div key={index} className="flex justify-between text-sm">
+        <div key={index} className="flex space-y-2 justify-between text-sm">
           <span className="text-gray-500">{activity.date}</span>
-          <span className="text-blue-600 hover:underline cursor-pointer">
+          <span className="w-40 text-blue-600 hover:underline cursor-pointer">
             {activity.label}
           </span>
         </div>

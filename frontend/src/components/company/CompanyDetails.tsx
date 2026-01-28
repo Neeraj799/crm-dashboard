@@ -29,7 +29,10 @@ const CompanyInfo = () => {
       <div className="space-y-2">
         <p className="flex">
           <span className="w-28 text-[#747474]">Postal:</span>
-          <a className="cursor-pointer text-blue-600">
+          <a
+            className="max-w-[200px] truncate cursor-pointer text-blue-600"
+            title="Västgötagatan 5, 102 61 Stockholm"
+          >
             Västgötagatan 5, 102 61 Stockholm
           </a>
         </p>

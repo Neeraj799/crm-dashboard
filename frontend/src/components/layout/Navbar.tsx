@@ -9,9 +9,9 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Navbar = () => {
   return (
     <div className="flex justify-between">
-      <div className="flex w-1/6 gap-4">
+      <div className="flex gap-4">
         <div className="flex overflow-hidden rounded-full border border-gray-300 bg-white shadow-sm">
-          <button className="flex items-center gap-4 px-2 py-2 text-sm font-medium text-teal-700 hover:bg-gray-100">
+          <button className="flex items-center gap-4 px-2 text-sm font-medium text-teal-700 hover:bg-gray-100">
             <BsBuildings className="text-base" />
             New
           </button>
@@ -23,7 +23,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className="flex overflow-hidden rounded-full border border-gray-300 bg-white shadow-sm">
-          <button className="flex items-center gap-4 px-2 py-2 text-sm font-medium text-teal-700 hover:bg-gray-100">
+          <button className="flex items-center gap-4 px-2 text-sm font-medium text-teal-700 hover:bg-gray-100">
             <MdManageSearch className="text-base size-6" />
           </button>
         </div>
