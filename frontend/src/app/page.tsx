@@ -6,15 +6,15 @@ import DealCardContainer from "@/components/deal/DealCardContainer";
 const page = () => {
   return (
     <DashboardLayout>
-      <div className="flex gap-4">
+      <div className="grid grid-cols-1 md:flex gap-4 px-10">
         {/* LEFT SIDE */}
-        <div className="w-3/4 flex flex-col gap-4">
+        <div className="w-full md:w-3/4 flex flex-col gap-4 pl-10">
           <CompanyCard />
           <SalesTable />
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="">
+        <div className="flex justify-center md:w-1/4">
           <DealCardContainer />
         </div>
       </div>

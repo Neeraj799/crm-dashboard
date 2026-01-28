@@ -27,7 +27,7 @@ const DealCardContainer = () => {
   if (!deal) return <p className="text-sm text-red-500">Failed to load deal</p>;
 
   return (
-    <div>
+    <div className="flex overflow-y-auto">
       <DealCard deal={deal} />
     </div>
   );

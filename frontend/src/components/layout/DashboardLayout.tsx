@@ -1,17 +1,18 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div className="flex">
-      {/*Sidebar*/}
-      <Sidebar />
+      <Sidebar open={sidebarOpen} />
 
-      <div className="flex flex-col w-full p-2">
-        <Navbar />
-
-        <main className="p-4">{children}</main>
+      <div className="flex-1">
+        <Navbar onSidebarClick={() => setSidebarOpen(!sidebarOpen)} />
+        <main>{children}</main>
       </div>
     </div>
   );
