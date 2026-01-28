@@ -13,16 +13,18 @@ interface DealTabsProps {
 
 const DealTabs = ({ activeTab, onChange }: DealTabsProps) => {
   const tabWrapper = (tab: DealTab) =>
-    `flex h-8 w-8 items-center justify-center rounded-full cursor-pointer transition
+    `flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full cursor-pointer transition
      ${activeTab === tab ? "bg-teal-100" : "hover:bg-gray-100"}`;
 
   const iconClass = (tab: DealTab) =>
-    `w-5 h-5 ${activeTab === tab ? "text-teal-700" : "text-gray-400"}`;
+    `w-4 h-4 sm:w-5 sm:h-5 ${
+      activeTab === tab ? "text-teal-700" : "text-gray-400"
+    }`;
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between items-center">
       {/* Tabs */}
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center gap-2 sm:gap-3">
         <div
           className={tabWrapper("search")}
           onClick={() => onChange("search")}
@@ -54,8 +56,8 @@ const DealTabs = ({ activeTab, onChange }: DealTabsProps) => {
       </div>
 
       {/* Dropdown */}
-      <button className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-400">
-        <IoIosArrowDown className="w-5 h-5 text-teal-700" />
+      <button className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-gray-400 shrink-0">
+        <IoIosArrowDown className="w-4 h-4 sm:w-5 sm:h-5 text-teal-700" />
       </button>
     </div>
   );

@@ -16,7 +16,7 @@ const DealCardContainer = () => {
       } catch (error) {
         console.error(error);
       } finally {
-        setLoading(false); // ✅ REQUIRED
+        setLoading(false);
       }
     };
 
@@ -27,7 +27,7 @@ const DealCardContainer = () => {
   if (!deal) return <p className="text-sm text-red-500">Failed to load deal</p>;
 
   return (
-    <div className="flex overflow-y-auto">
+    <div className="flex justify-center px-3 sm:px-6">
       <DealCard deal={deal} />
     </div>
   );

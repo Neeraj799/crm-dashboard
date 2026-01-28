@@ -8,18 +8,31 @@ const TableActions = () => {
   const handleRefresh = () => {
     console.log("Refresh clicked");
   };
+
   return (
-    <div className="flex items-center justify-between px-4 py-3 text-sm text-orange-600">
-      <div className="flex gap-6">
+    <div
+      className="
+      flex flex-col gap-3
+      sm:flex-row sm:items-center sm:justify-between
+      px-4 py-3 text-sm text-orange-600
+    "
+    >
+      {/* LEFT ACTIONS */}
+      <div className="flex flex-wrap gap-2 sm:gap-6">
         <ActionButton icon={<IoIosAddCircleOutline />} label="Add" />
         <ActionButton icon={<RiDeleteBin5Line />} label="Delete" />
         <ActionButton icon={<CiFilter />} label="Filter" />
         <ActionButton icon={<CiImport />} label="Export" />
       </div>
 
+      {/* REFRESH */}
       <button
         onClick={handleRefresh}
-        className="rounded-md p-2 hover:bg-gray-100 transition"
+        className="
+          self-end sm:self-auto
+          rounded-md p-2
+          hover:bg-gray-100 transition
+        "
         aria-label="Refresh table"
       >
         <IoIosRefresh className="text-gray-600" size={20} />
@@ -36,9 +49,17 @@ const ActionButton = ({
   label: string;
 }) => {
   return (
-    <button className="flex items-center gap-2 hover:bg-orange-50 transition rounded-md p-2">
+    <button
+      className="
+      flex items-center gap-2
+      rounded-md p-2
+      hover:bg-orange-50 transition
+    "
+    >
       <span className="text-lg">{icon}</span>
-      <span>{label}</span>
+
+      {/* Hide label on mobile */}
+      <span className="hidden sm:inline">{label}</span>
     </button>
   );
 };

@@ -20,10 +20,10 @@ type RowProps = {
 };
 
 const Row = ({ label, value, link }: RowProps) => (
-  <div className="flex items-center justify-between">
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
     <span className="text-gray-500 text-sm">{label}</span>
     <span
-      className={`w-40 truncate text-sm ${
+      className={`sm:w-40 truncate text-sm ${
         link ? "text-blue-600 hover:underline cursor-pointer" : "text-gray-900"
       }`}
       title={value}
