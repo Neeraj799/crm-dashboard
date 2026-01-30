@@ -11,13 +11,13 @@ const page = () => {
         <div className="w-full md:w-3/4 flex flex-col gap-4 pl-10">
           <CompanyCard />
 
-          <div className="min-h-[300px]">
+          <div className="">
             <SalesTable />
           </div>
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="flex justify-center md:w-1/4 min-h-[400px]">
+        <div className="flex justify-center md:w-1/4">
           <DealCardContainer />
         </div>
       </div>
