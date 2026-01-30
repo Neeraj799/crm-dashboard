@@ -15,9 +15,7 @@ const CompanyCard = () => {
 
   return (
     <div className="w-full max-w-5xl rounded-xl border bg-white p-4 shadow-sm">
-      {/* HEADER */}
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        {/* LEFT */}
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 shrink-0 rounded-full bg-indigo-100 flex items-center justify-center">
             <span className="font-bold text-indigo-600">SC</span>
@@ -34,7 +32,6 @@ const CompanyCard = () => {
           </div>
         </div>
 
-        {/* RIGHT ACTIONS */}
         <div className="flex justify-end gap-2">
           <button className="flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-full bg-orange-500">
             <PiPencilSimpleLight className="h-5 w-5 md:h-6 md:w-6 text-white" />
@@ -46,17 +43,13 @@ const CompanyCard = () => {
         </div>
       </div>
 
-      {/* TABS */}
       <CompanyTabs activeTab={activeTab} onChange={setActiveTab} />
 
-      {/* DETAILS */}
       <CompanyDetails activeTab={activeTab} />
 
       <div className="mt-4 border-t border-gray-200" />
 
-      {/* FOOTER */}
       <div className="mt-3 flex flex-col gap-3 text-sm text-gray-500 md:flex-row md:items-center md:justify-between">
-        {/* CHECKBOXES */}
         <div className="flex gap-4">
           <label className="flex items-center gap-2">
             <input type="checkbox" className="size-4" />
@@ -69,10 +62,8 @@ const CompanyCard = () => {
           </label>
         </div>
 
-        {/* UPDATED */}
         <span className="text-xs md:text-sm">Updated: 18/09/2023 OG</span>
 
-        {/* PAGINATION */}
         <div className="flex gap-2">
           <button className="flex h-8 w-8 items-center justify-center">
             <IoIosArrowDropleft className="h-7 w-7" />

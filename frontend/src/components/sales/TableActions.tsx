@@ -11,9 +11,7 @@ const TableActions = ({ onRefresh }: { onRefresh: () => void }) => {
 
   return (
     <>
-      {/* ACTION BAR */}
       <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 text-sm text-orange-600">
-        {/* LEFT BUTTONS */}
         <div className="flex flex-wrap items-center gap-2 sm:gap-6">
           <ActionButton
             icon={<IoIosAddCircleOutline />}
@@ -25,7 +23,6 @@ const TableActions = ({ onRefresh }: { onRefresh: () => void }) => {
           <ActionButton icon={<CiImport />} label="Export" />
         </div>
 
-        {/* REFRESH BUTTON */}
         <button
           onClick={onRefresh}
           className="rounded-md p-2 hover:bg-gray-100 transition"
@@ -35,7 +32,6 @@ const TableActions = ({ onRefresh }: { onRefresh: () => void }) => {
         </button>
       </div>
 
-      {/* ADD SALE MODAL */}
       <AddSaleModal
         open={openAddModal}
         onClose={() => setOpenAddModal(false)}

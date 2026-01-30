@@ -7,16 +7,22 @@ interface CompanyDetailsProps {
 const CompanyDetails: React.FC<CompanyDetailsProps> = ({ activeTab }) => {
   switch (activeTab) {
     case "Activities":
-      return <div className="mt-6 text-sm">Activities content</div>;
+      return (
+        <div className="mt-6 text-sm text-[#747474]">Activities content</div>
+      );
 
     case "Contacts":
-      return <div className="mt-6 text-sm">Contacts content</div>;
+      return (
+        <div className="mt-6 text-sm text-[#747474]">Contacts content</div>
+      );
 
     case "Sales":
-      return <div className="mt-6 text-sm">Sales content</div>;
+      return <div className="mt-6 text-sm text-[#747474]">Sales content</div>;
 
     case "Requests":
-      return <div className="mt-6 text-sm">Requests content</div>;
+      return (
+        <div className="mt-6 text-sm text-[#747474]">Requests content</div>
+      );
 
     default:
       return <CompanyInfo />;

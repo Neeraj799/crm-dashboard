@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import api from "@/lib/axios";
+import { toast } from "react-toastify";
 
 const AddSaleModal = ({
   open,
@@ -43,10 +44,13 @@ const AddSaleModal = ({
         status,
       });
 
-      onSuccess(); // ✅ refresh table
+      toast.success("Sale added successfully");
+
+      onSuccess();
       onClose();
     } catch (err: any) {
-      setError(err?.response?.data?.message || "Failed to create sale");
+      console.log(err?.response?.data?.message);
+      toast.error(err?.response?.data?.message || "Failed to create sale");
     } finally {
       setLoading(false);
     }
@@ -55,9 +59,9 @@ const AddSaleModal = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
       <div className="w-full max-w-md rounded-xl bg-white p-6">
-        <h2 className="mb-4 text-lg font-semibold">Add Sale</h2>
+        <h2 className="mb-4 text-lg font-semibold text-[#687072]">Add Sale</h2>
 
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form onSubmit={handleSubmit} className="space-y-3 text-[#687072]">
           <input
             placeholder="Sale name"
             value={saleName}

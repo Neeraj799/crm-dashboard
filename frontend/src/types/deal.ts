@@ -1,4 +1,3 @@
-// types/deal.ts
 export type Deal = {
   title: string;
   amount: string;

@@ -29,7 +29,7 @@ const SalesTable = () => {
       <TableActions onRefresh={refetch} />
 
       {/* PAGINATION */}
-      <div className="flex items-center justify-between px-4 py-3 text-sm">
+      <div className="flex items-center justify-between px-4 py-3 text-sm text-[#687072]">
         <button
           disabled={page === 1}
           onClick={() => setPage((p) => p - 1)}

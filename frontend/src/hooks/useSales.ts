@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import api from "@/lib/axios";
 import { Sale } from "@/types/sales";
+import { toast } from "react-toastify";
 
 export const useSales = () => {
   const [sales, setSales] = useState<Sale[]>([]);
@@ -11,7 +12,7 @@ export const useSales = () => {
 
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const limit = 5; // keep it simple
+  const limit = 5;
 
   const fetchSales = async (pageNumber = page) => {
     try {
@@ -25,7 +26,10 @@ export const useSales = () => {
       setSales(data.data);
       setTotalPages(data.pagination.totalPages);
     } catch (err: any) {
-      setError(err?.response?.data?.message || "Failed to fetch sales");
+      const message = err?.response?.data?.message || "Failed to fetch sales";
+
+      setError(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }

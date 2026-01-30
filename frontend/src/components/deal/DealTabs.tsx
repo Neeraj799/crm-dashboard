@@ -23,7 +23,6 @@ const DealTabs = ({ activeTab, onChange }: DealTabsProps) => {
 
   return (
     <div className="flex justify-between items-center">
-      {/* Tabs */}
       <div className="flex flex-wrap items-center gap-2 sm:gap-3">
         <div
           className={tabWrapper("search")}
@@ -55,7 +54,6 @@ const DealTabs = ({ activeTab, onChange }: DealTabsProps) => {
         </div>
       </div>
 
-      {/* Dropdown */}
       <button className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-gray-400 shrink-0">
         <IoIosArrowDown className="w-4 h-4 sm:w-5 sm:h-5 text-teal-700" />
       </button>

@@ -1,7 +1,6 @@
 import { Deal } from "@/types/deal";
 
 export async function getDeal(): Promise<Deal> {
-  // Simulating API fetch
   return {
     title: "45 Components - RTS",
     amount: "17 344 EUR",
