@@ -21,7 +21,7 @@ const leadSchema = new mongoose.Schema(
     },
 
     stage: {
-      type: Number, // percentage
+      type: Number,
       min: 0,
       max: 100,
       required: true,
